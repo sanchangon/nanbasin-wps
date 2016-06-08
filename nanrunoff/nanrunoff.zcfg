@@ -1,0 +1,62 @@
+[nanrunoff]
+ Title = GRASS GIS based on WPS using ZOO-Project.
+ Abstract = GRASS GIS based on WPS.
+ processVersion = 2
+ storeSupported = true
+ statusSupported = true
+ serviceProvider = nanrunoff
+ serviceType = Python
+ <MetaData>
+   title = Nan basin runoff serface. 
+ </MetaData>
+ <DataInputs>
+ 
+  [name]
+   Title = Input string
+   Abstract = Input User for start process.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = Start Interpolate from raingage stations.
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     UOM = meter
+    </Supported>
+   </LiteralData>
+   
+  
+ </DataInputs>
+ 
+ <DataOutputs>
+  [Result]
+   Title = The process status.
+   Abstract = Execute result.
+   <MetaData>
+    title = Output Result data.
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     value = GTiff
+    </Supported>
+    <Supported>
+     mimeType = image/tif
+     </Supported>
+  <Supported>
+     mimeType = image/png
+     </Supported>     
+    <Supported>
+     mimeType = text/xml
+     encoding = UTF-8
+     schema = http://schemas.opengis.net/gml/3.1.0/base/feature.xsd
+    </Supported>
+   </LiteralData>
+ </DataOutputs>

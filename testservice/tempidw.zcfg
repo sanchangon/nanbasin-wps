@@ -1,0 +1,47 @@
+[tempidw]
+ Title = GRASS GIS based on WPS using ZOO platform.
+ Abstract = GRASS GIS based on WPS.(Near Real-Time rainfall Interpolation based on Web Processing Service Using FOSS4G and ZOO)
+ processVersion = 2
+ storeSupported = true
+ statusSupported = true
+ serviceProvider = tempidw_zoo
+ serviceType = Python
+ <MetaData>
+   title = Demo
+ </MetaData>
+ <DataInputs>
+  [a]
+   Title = Input string
+   Abstract = The Name.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = My test
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     UOM = meter
+    </Supported>
+   </LiteralData>
+ </DataInputs>
+ <DataOutputs>
+  [Result]
+   Title = The process status.
+   Abstract = Execute result.
+   <MetaData>
+    title = My test
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     UOM = meter
+    </Supported>
+   </LiteralData>
+ </DataOutputs>

@@ -1,0 +1,150 @@
+[nanlandslide]
+ Title = GRASS GIS based on WPS using ZOO-Project.
+ Abstract = GRASS GIS based on WPS.
+ processVersion = 2
+ storeSupported = true
+ statusSupported = true
+ serviceProvider = nanlandslide
+ serviceType = Python
+ <MetaData>
+   title = Nan bansin landslide risk tools
+ </MetaData>
+ <DataInputs>
+ 
+  [name]
+   Title = Input string
+   Abstract = Input User for start process.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = Start Interpolate from raingage stations.
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     UOM = meter
+    </Supported>
+   </LiteralData>
+   
+  [idw_vect]
+   Title = Input string
+   Abstract = Input point layer from GRASS GIS.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = Points data has imported from PostgreSQL/PostGIS via import/link using GRASS GIS.
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     UOM = meter
+    </Supported>
+   </LiteralData>
+   
+  [idw_rast]
+   Title = Input string
+   Abstract = Output raster interpolation layer.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = Rainfall raster interpolation from v.surf.idw module.
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     UOM = meter
+    </Supported>
+   </LiteralData>      
+
+  [idw_power]
+   Title = Input string
+   Abstract = Input Power paraminter/ Default: 2.0.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = Greater values assign greater influence to closer points.
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     UOM = meter
+    </Supported>
+   </LiteralData>    
+
+  [idw_column]
+   Title = Input string
+   Abstract = Attribute table column with values to interpolate.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = Attribute table column with values to interpolate/Required if layer > 0.
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     UOM = meter
+    </Supported>
+   </LiteralData>    
+     
+   [dsn_export]
+   Title = Input string
+   Abstract = Output raster file.
+   minOccurs = 1
+   maxOccurs = 1
+   <MetaData>
+    title = My test
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     value = GTiff
+    </Default>
+    <Supported>
+     UOM = meter
+    </Supported>
+   </LiteralData>
+ </DataInputs>
+ 
+ <DataOutputs>
+  [Result]
+   Title = The process status.
+   Abstract = Execute result.
+   <MetaData>
+    title = Output Result data.
+   </MetaData>
+   <LiteralData>
+    DataType = string
+    <Default>
+     UOM = meter
+    </Default>
+    <Supported>
+     value = GTiff
+    </Supported>
+    <Supported>
+     mimeType = image/tif
+     </Supported>
+  <Supported>
+     mimeType = image/png
+     </Supported>     
+    <Supported>
+     mimeType = text/xml
+     encoding = UTF-8
+     schema = http://schemas.opengis.net/gml/3.1.0/base/feature.xsd
+    </Supported>
+   </LiteralData>
+ </DataOutputs>
